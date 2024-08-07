@@ -17,8 +17,12 @@ export default function Accordian() {
                 {
                     data && data.length > 0
                         ? data.map((dataItem) => (
-                            <div className="item">
-                                <div onClick={()=>handleSelection(dataItem.id)} className="title">
+                            <div className="item" key={dataItem.id}>
+                                <div onClick={()=>handleSelection(dataItem.id)} 
+
+                                    className="title" 
+                                    data-testid={`title-${dataItem.id}`}>
+                                        
                                     <h3>{dataItem.question}</h3>
                                 </div>
                                 {
