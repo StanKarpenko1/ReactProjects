@@ -39,7 +39,7 @@ describe('Accordian Component', () => {
     const index = testItem - 1
 
     mount(<Accordian />);
-    
+     
     cy.get(`[data-testid="title-${testItem}"]`).click()
     cy.contains(`${data[index].answer}`).should('be.visible')
     cy.get(`[data-testid="title-${testItem++}"]`).click()
