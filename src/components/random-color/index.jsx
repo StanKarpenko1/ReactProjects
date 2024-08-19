@@ -28,8 +28,11 @@ export default function RandomColor() {
 
     }
     useEffect(() => {
-        if (typeOfColor === 'rgb') handleCreateRandomRgbColor()
-        else handleCreateRandomHexColor()
+        if (typeOfColor === 'rgb') {
+            handleCreateRandomRgbColor()
+        } else {
+            handleCreateRandomHexColor()
+        }
     }, [typeOfColor])
 
     return (
