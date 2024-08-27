@@ -10,3 +10,9 @@
 .inactive {
     color: black
 }
+
+.message {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}

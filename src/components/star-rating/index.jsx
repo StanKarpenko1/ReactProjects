@@ -7,6 +7,16 @@ export default function StarRating ({starsQtty = 5}) {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
 
+      // Array of messages for each rating
+      const messages = [
+        "Please select a rating",  // Message for no rating
+        "The Quality is Bad",      // Message for 1 star
+        "The Quality is Poor",     // Message for 2 stars
+        "The Quality is Average",  // Message for 3 stars
+        "The Quality is Good",     // Message for 4 stars
+        "The Quality is Excellent" // Message for 5 stars
+    ];
+
     function handleClick (getCurrentIndex) {
         setRating(getCurrentIndex)
     }
@@ -34,7 +44,12 @@ export default function StarRating ({starsQtty = 5}) {
                     />
 
                 })
+                
             }
+            <div className="message">
+                {messages[rating]}
+            </div>
         </div>
+        
     )
 }
